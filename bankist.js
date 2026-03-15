@@ -1,3 +1,39 @@
+const checkdogs = function(dogsjulia, dogskate){
+    const dogsjuliaCorrected = 
+    dogsjuliaCorrected.splice(0,1)
+    dogsjuliaCorrected.splice(-2);
+    console.log(dogsjuliaCorrected)
+    const dogs = dogsjuliaCorrected.concat(dogskate)
+    console.log(dogs)
+}
+
+checkdogs([3,5,2,12,7][4,1,15,8,3]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
@@ -78,6 +114,6 @@ const displayMovements = function(movements){
         </div>
     `
         containerMovements.insertAdjacentHTML("afterbegin", html)
-
  })      
-}
+};
+displayMovements(account1.movements);
