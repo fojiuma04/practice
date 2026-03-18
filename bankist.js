@@ -91,10 +91,19 @@ const createUserName = function(){
 return username
 }
 console.log(createUserName('Steven Thomas Williams'))
+ 
+
+const deposits = movements.filter(function (mov){
+  return mov > 0;
+});
+console.log(movements);
+console.log(deposits);              
 
 
-
-
+const withdrawals = movements.filter(function(mov){
+  return mov < 0
+});
+console.log(withdrawals)
 
 
 // const eurToUsd = 1.1
