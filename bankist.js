@@ -1,9 +1,23 @@
 
 const calcAverageHumanAge = function(dogAge){
- const humanAge = dogAge.map(age => age <= 2? 2 * age : 16 + age * 4) 
+ const humanAge = dogAge.map(function(age){
+  if(age <= 2){
+    return 2 * age
+  }else if(age > 2){
+    return 16 + age * 4
+  }
+ }) 
+ //age => age <= 2? 2 * age : 16 + age * 4
+ const adults = humanAge.filter(age => age >= 18)
+ const averageAge = adults.reduce(function(age, cur){
+  return age + cur
+ }, 0)  / adults.length
 
+console.log(averageAge)
+console.log(humanAge)
+console.log(adults)
 }
-console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]))
+calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3])
 
 
 
