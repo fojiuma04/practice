@@ -1,4 +1,3 @@
-
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
@@ -83,73 +82,9 @@ const displayMovements = function(movements){
 };
 displayMovements(account1.movements);
 
-const calcDisplay = movements.reduce(function(acc , mov, i){
-  return acc + mov;
-}, 0)
-labelBalance.innerHTML = `${calcDisplay} EUR`
 
-const user = "Steven Thomas Williams"
-const createUserName = function(){
-    const username = user.toLowerCase().split(' ').map((name) =>
-     name[0]
-).join('');
-return username
-}
-console.log(createUserName('Steven Thomas Williams'))
+
  
-//MAXIMUM VALUE IN THE ARRAY
- const maxValue = movements.reduce(function(acc, cur, i){
-if(acc > cur){
-  return acc
-}else{
-  return cur
-}
- }, movements[0])
-
- console.log(maxValue);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -207,6 +142,30 @@ if(acc > cur){
 //     }
 // }
 // )
+//const calcDisplay = movements.reduce(function(acc , mov, i){
+//   return acc + mov;
+// }, 0)
+// labelBalance.innerHTML = `${calcDisplay} EUR`
+
+// const user = "Steven Thomas Williams"
+// const createUserName = function(){
+//     const username = user.toLowerCase().split(' ').map((name) =>
+//      name[0]
+// ).join('');
+// return username
+// }
+// console.log(createUserName('Steven Thomas Williams'))
+ 
+// //MAXIMUM VALUE IN THE ARRAY
+//  const maxValue = movements.reduce(function(acc, cur, i){
+// if(acc > cur){
+//   return acc
+// }else{
+//   return cur
+// }
+//  }, movements[0])
+
+//  console.log(maxValue);
 
 
 // console.log(movementsDescription)
@@ -230,3 +189,32 @@ if(acc > cur){
 // console.log(adults)
 // }
 // calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3])
+// const calcAverageHumanAge = function(dogAge){
+//  const humanAge = dogAge.map(function(age){
+//   if(age <= 2){
+//     return 2 * age
+//   }else if(age > 2){
+//     return 16 + age * 4
+//   }
+//  }) 
+//  //age => age <= 2? 2 * age : 16 + age * 4
+//  const adults = humanAge.filter(age => age >= 18)
+//  const averageAge = adults.reduce(function(age, cur){
+//   return age + cur
+//  }, 0)  / adults.length
+
+// console.log(averageAge)
+// console.log(humanAge)
+// console.log(adults)
+// }
+// calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3])
+
+// const calcAverageHumanAge = function(dogAge){
+//   const HumanAge = dogAge
+//   .map(age => age <= 2 ? 2 * age : 16 + age * 4)
+//   .filter(age => age >= 18)
+//   .reduce((acc, age, i, arr) => acc + age / arr.length, 0)
+//   console.log(HumanAge)
+// }
+// calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3])
+// calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4])
