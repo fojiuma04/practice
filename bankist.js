@@ -89,8 +89,12 @@ console.log(firstWithdrawal)
 console.log(accounts)
 
 
- 
+// const account = accounts.find(acc => acc.owner === "Jessica Davis");
+// console.log(account)
 
+ const account =  [];
+ for(const acc of accounts) account.push(acc.owner === "Jessica Davis;")
+console.log(account)
 
 
 
