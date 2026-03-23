@@ -92,10 +92,18 @@ console.log(accounts)
 // const account = accounts.find(acc => acc.owner === "Jessica Davis");
 // console.log(account)
 
- const account =  [];
- for(const acc of accounts) account.push(acc.owner === "Jessica Davis;")
+let account;
+for(const acc of accounts){
+  if(acc.owner === "Jessica Davis"){
+    account = acc
+    break;
+  }
+}
 console.log(account)
 
+// for(const acc of accounts)acc => acc.owner === "Jessica Davis"
+
+// console.log(acc)
 
 
 
