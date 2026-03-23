@@ -82,6 +82,11 @@ const displayMovements = function(movements){
 };
 displayMovements(account1.movements);
 
+const firstWithdrawal = movements.find(mov => mov < 0);
+console.log(movements);
+console.log(firstWithdrawal)
+
+console.log(accounts)
 
 
  
