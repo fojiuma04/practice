@@ -68,6 +68,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 
 const displayMovements = function(movements){
+  containerMovements.innerHTML = ''
  movements.forEach(function (mov, i){
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     const html = `
@@ -81,25 +82,26 @@ const displayMovements = function(movements){
  })      
 };
 displayMovements(account1.movements);
-
-const firstWithdrawal = movements.find(mov => mov < 0);
-console.log(movements);
-console.log(firstWithdrawal)
-
-console.log(accounts)
+const createUserName = function(user){
+    const username = user.toLowerCase.split(' ').map((name) =>
+     name[0]
+).join('');
+return username
+}
+createUserName(accounts)
 
 
 // const account = accounts.find(acc => acc.owner === "Jessica Davis");
 // console.log(account)
 
-let account;
-for(const acc of accounts){
-  if(acc.owner === "Jessica Davis"){
-    account = acc
-    break;
-  }
-}
-console.log(account)
+// let account;
+// for(const acc of accounts){
+//   if(acc.owner === "Jessica Davis"){
+//     account = acc
+//     break;
+//   }
+// }
+// console.log(account)
 
 // for(const acc of accounts)acc => acc.owner === "Jessica Davis"
 
@@ -165,12 +167,7 @@ console.log(account)
 // labelBalance.innerHTML = `${calcDisplay} EUR`
 
 // const user = "Steven Thomas Williams"
-// const createUserName = function(){
-//     const username = user.toLowerCase().split(' ').map((name) =>
-//      name[0]
-// ).join('');
-// return username
-// }
+
 // console.log(createUserName('Steven Thomas Williams'))
  
 // //MAXIMUM VALUE IN THE ARRAY
