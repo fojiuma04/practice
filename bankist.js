@@ -114,9 +114,40 @@ const createUserName = function(user){
     const username = user.toLowerCase.split(' ').map((name) =>
      name[0]
 ).join('');
-return username
+return username;
 }
 createUserName(accounts)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // const account = accounts.find(acc => acc.owner === "Jessica Davis");
