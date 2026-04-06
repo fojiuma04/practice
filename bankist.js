@@ -100,27 +100,34 @@ const calcDisplaySummary = function (movements){
   labelSumOut.textContent = `${Math.abs(out)}`;
 
   const intrest = movements 
-  .filter(mov = mov > 0)
-  .map(deposit = (deposit * 1.2) / 100)
+  .filter(mov => mov > 0)
+  .map(deposit => (deposit * 1.2) / 100)
   .filter((int, i, arr) => {
 
     return int >= 1;
   })
-  .reduce((acc, int) => acc + int, 0);
+  .reduce((acc, int) => acc + int, 0); 
   labelSumInterest.textContent = `${intrest}`;
 };
 calcDisplaySummary(account1.movements);
-const createUserName = function(user){
-    const username = user.toLowerCase.split(' ').map((name) =>
-     name[0]
-).join('');
-return username;
+
+const createUserName = function(accs){
+  accs.forEach(function (acc){
+    const username = acc.owner.toLowerCase()
+    .split(' ')
+    .map(name => name[0])
+    .join('')
+  });
 }
 createUserName(accounts)
 
 
 
+btnLogin.addEventListener('click', function(e){
+e.preventDefault();
 
+console.log('LOGGED IN')
+})
 
 
 
