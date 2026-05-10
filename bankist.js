@@ -152,6 +152,8 @@ btnTransfer.addEventListener('click',function(e){
   const amount = Number(inputTransferAmount.value);
   const recieverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value)
+
+    inputTransferAmount.value =inputTransferTo.value = " "
  
   if(amount > 0 &&  
     recieverAcc &&
@@ -163,7 +165,22 @@ btnTransfer.addEventListener('click',function(e){
    updateUI(currentAccount);
   }
 });
+btnClose.addEventListener('click', function(e){
 
+  e.preventDefault();
+   
+   if(inputCloseUsername.value === currentAccount.username
+     && Number(inputClosePin.value) === currentAccount.pin){
+       
+    const index = accounts.findIndex(acc => acc.username === currentAccount.username);
+
+    accounts.splice(index, 1);
+
+  containerApp.style.opacity = 0;
+   }
+
+   inputCloseUsername.value =inputClosePin.value = " "
+})
 
 
 
