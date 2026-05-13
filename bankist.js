@@ -165,6 +165,17 @@ btnTransfer.addEventListener('click',function(e){
    updateUI(currentAccount);
   }
 });
+
+btnLoan.addEventListener('click', function(e){
+  e.preventDefault();
+
+  const amount = Number(inputLoanAmount);
+  if(amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)){
+    currentAccount.movements.push(amount)
+
+    updateUI()
+  }
+})
 btnClose.addEventListener('click', function(e){
 
   e.preventDefault();
@@ -182,6 +193,11 @@ btnClose.addEventListener('click', function(e){
    inputCloseUsername.value =inputClosePin.value = " "
 })
 
+// console.log(movements);
+// console.log(movements.includes(-130));
+
+// const anyDeposits = movements.some(mov => mov > 1500);
+// console.log(anyDeposits);
 
 
 
@@ -268,7 +284,8 @@ btnClose.addEventListener('click', function(e){
 // for(const mov of movements) movementsUSDof.push(mov * eurToUsd)
 // console.log(movementsUSDof)
 
-// const movementsDescription = movements.map((mov, i) => `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew' } ${Math.abs(mov)}`
+// const movementsDescription = 
+// movements.map((mov, i) => `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew' } ${Math.abs(mov)}`
 // {
 //     if(mov > 0){
 //         return `Movement ${i + 1}: You deposited ${mov}` 
