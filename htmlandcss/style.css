@@ -170,3 +170,12 @@ button{
     border-radius: 18px;
     
 }
+
+.login-button{
+    margin-top: 10px;
+}
+
+#login-text{
+    text-decoration: none;
+    color: black;
+}
