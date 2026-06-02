@@ -2,7 +2,7 @@
 medium green: #55c57a
 Dark green: #28b485 */
 
-*{
+*{ 
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -47,7 +47,7 @@ body{
 }
 
 .logo:hover{
-    animation: moveInRight 1s ease-in;
+    animation: moveInRight 3s ease-out;
 }
 
 .text-box{
